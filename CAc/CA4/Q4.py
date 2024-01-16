@@ -3,10 +3,17 @@ from collections import deque
 
 n, m, k = map(int,input().split())
 
+
+
+
+
 edges = {tuple(map(int, input().split())): set() for _ in range(k)}
 edges[(n, m)] = set()
 edges[(1, 1)] = set()
 vertexes = set(edges.keys())
+
+
+
 
 def are_adjacent(node1, node2):
     return (node1[0] == node2[0] and abs(node1[1] - node2[1]) == 1) or \

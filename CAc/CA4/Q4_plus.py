@@ -26,7 +26,9 @@ for node in vertexes:
             edges[edg].append(node)
             edges[node].append(edg)
 
+
 def BFS():
+    time = 0
     first_node = (1, 1)
     pedars = {first_node: (-1, -1)}
     tool = {first_node: 0}
@@ -35,6 +37,7 @@ def BFS():
     qq = deque([first_node])
 
     while qq:
+        time += 1
         main_node = qq.popleft()
         for ed in edges[main_node]:
             if not visited[ed]:
@@ -44,7 +47,10 @@ def BFS():
                     return tool[ed]
                 qq.append(ed)
                 visited[ed] = 1
+        if time > 10**5:
+            print(2)
 
     return -1
+
 
 print(BFS())

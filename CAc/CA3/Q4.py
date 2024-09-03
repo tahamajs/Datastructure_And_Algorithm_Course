@@ -7,9 +7,6 @@ tedad_baches = [0] *( n+1)
 pedsss = list(map(int,input().split()))
 
 
-
-
-
 for i in range(n-1):
     pedars[i+2] = pedsss[i]
     tedad_baches[pedsss[i]] += 1
@@ -23,7 +20,6 @@ for i in range(q):
 
 answares = []
 for tmp in querys:
-    # tmp = list(map(int,input().split()))
     many = tmp[0]
     sum = 0
     query = tmp[1:]
@@ -37,10 +33,7 @@ for tmp in querys:
     for i in set(query).intersection(p_list.keys()):
         
         sum -= 2*p_list[i]
-    # answares.append(sum)
     print(sum)
 
-# for i in range(len(answares)):
-#     print(answares[i])
 
 

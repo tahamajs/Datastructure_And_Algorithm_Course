@@ -14,9 +14,6 @@ for i in range(d):
 
 heapq.heapify(not_valid_heap)
 
-# print(not_valid_heap)
-
-# print(not_valid_heap[0][0])
 
 for day in range(1,n+1):
     while not_valid_heap and (not_valid_heap[0][0] == day) :
@@ -24,7 +21,6 @@ for day in range(1,n+1):
         heapq.heappush(valid_heap,[-pushed_element[2], pushed_element[1]])
     
     
-    # print(valid_heap[0][1])
     if(valid_heap):
         valid_heap[0][1] -= 1
         if valid_heap[0][1] == 0:

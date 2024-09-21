@@ -217,5 +217,3 @@ This repository is primarily for use in the course. However, if you'd like to co
 This repository is for educational purposes only.
 
 ---
-
-Let me know if you'd like to customize any part of the file!
